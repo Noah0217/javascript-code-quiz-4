@@ -6,7 +6,7 @@ function printHighscores() {
          return b.score - a.score;
      });
      highscores.forEach(function(score) {
-         var litag = document.createElement("li");
+         var liTag = document.createElement("li");
          liTag.textContent = score.initials + " - " + score.score;
          var olEl = document.getElementById("highscores");
          olEl.appendChild(liTag);
@@ -14,7 +14,7 @@ function printHighscores() {
 }
 
 function clearHighscores() {
-    window.localStorage.storage.removerItem("highscores")
+    window.localStorage.removeItem("highscores")
     window.location.reload();
 }
 document.getElementById("clear").onclick = clearHighscores;

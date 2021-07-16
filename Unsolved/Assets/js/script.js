@@ -11,31 +11,33 @@ var startBtn = document.getElementById("start");
 var initialsEl = document.getElementById("initials");
 var feedbackEl = document.getElementById("feedback");
 
-//Sound Effects
-var sfxRight = new Audio("assets/unsolved/sfx/correct.wav")
-var sfxWrong = new Audio("assets/unsolved/sfx/incorrect.wav")
+//Sfx
+var sfxRight = new Audio("");
+var sfxWrong = new Audio("");
 
 function startQuiz() {
     var startScreenEl = document.getElementById("start-screen");
-    startScreenEl/setAttribute("class", "hide");
+    startScreenEl.setAttribute("class", "hide");
     questionsEl.removeAttribute("class");
     timerId = setInterval(clockTick, 1000);
     timerEl.textContent = time;
-    getQuestions();
+    getQuestion();
+    
 
 }
   
 function getQuestion() {
-    var currentQuestion = questions[currentQuestionsIndex];
+    var currentQuestion = questions[currentQuestionIndex];
     var titleEl = document.getElementById("questions-title");
+    titleEl.textContent = currentQuestion.title;
     choicesEl.innerHtml = "";
-    currentQuestion.choices.gotEach(function(choice, i) {
-        var choiceNode = document.getElement("button");
+    currentQuestion.choices.forEach(function(choice, i) {
+        var choiceNode = document.createElement("button");
         choiceNode.setAttribute("class", "choice");
         choiceNode.setAttribute("value", choice);
         choiceNode.textContent = i + 1 + ". " + choice;
         choiceNode.onclick = questionClick;
-        Choices.appendChild(choiceNode);
+        choicesEl.appendChild(choiceNode);
     });
 }
 
@@ -48,7 +50,7 @@ time = 0;
 }
 
 timerEl.textContent = time;
-sfxWrong.play();
+//sfxWrong.play();
 feedbackEl.textContent = "Wrong!";
     } else {
         sfxRight.play();
@@ -60,9 +62,9 @@ feedbackEl.textContent = "Wrong!";
        feedbackEl.setAttribute("class", "feedback hide");
    }, 1000);
 
-   currentQuestionsIndex++;
+   currentQuestionIndex++;
 
-   if (currentQuestionsIndex === questions.length) {
+   if (currentQuestionIndex === questions.length) {
        quizEnd();
    } else {
        getQuestion();
@@ -119,6 +121,6 @@ function checkForEnter(event) {
 
 submitBtn.onclick = saveHighscore;
 
-startBtn.onClick = StartQuiz;
+startBtn.onclick = startQuiz;
 
 initialsEl.onkeyup = checkForEnter;
