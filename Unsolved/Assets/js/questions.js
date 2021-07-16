@@ -4,7 +4,7 @@
 var questions = [
     {
         title: "Commonly used data types DO NOT include:",
-        choices: ["strings", "booleans", "alerts", "numbers"],
+        choices: ["strings", "booleans", "alert", "numbers"],
         answer: "alert"
     },
 
@@ -39,7 +39,7 @@ var questions = [
     {
         title:
         "A very useful tool used during development and debugging for printing content to the debugger is:",
-        choices: ["JavaScript", "terminal / bash", "for loops", "console log"],
+        choices: ["JavaScript", "terminal / bash", "for loops", "console.log"],
         answer: "console.log"
     }
 ];
