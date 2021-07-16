@@ -19,3 +19,4 @@ function clearHighscores() {
 }
 document.getElementById("clear").onclick = clearHighscores;
 printHighscores();
+//
