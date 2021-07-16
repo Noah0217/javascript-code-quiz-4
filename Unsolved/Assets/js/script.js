@@ -30,7 +30,7 @@ function getQuestion() {
     var currentQuestion = questions[currentQuestionIndex];
     var titleEl = document.getElementById("questions-title");
     titleEl.textContent = currentQuestion.title;
-    choicesEl.innerHtml = "";
+    choicesEl.innerHTML = "";
     currentQuestion.choices.forEach(function(choice, i) {
         var choiceNode = document.createElement("button");
         choiceNode.setAttribute("class", "choice");
