@@ -12,3 +12,5 @@
 - CSS
 
 <h2>Preview<h2>
+ 
+![Screenshot 2022-05-30 220818](https://user-images.githubusercontent.com/84366215/171091036-8ba2c9f6-2624-4681-b8af-e359fc4d0c14.png)
