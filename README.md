@@ -1,6 +1,6 @@
 # Javascript Quiz
 
-<h2>Description<br><h4>A quiz like application made with javascript.
+<h2>Description<br><h4>A coding quiz application made with javascript.
 <h3 align="left">App Deployed Here</h3>
  https://noah0217.github.io/javascript-quiz-4/
   
