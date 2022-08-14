@@ -1,3 +1,5 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 # Javascript Quiz
 
 <h2>Description<br><h4>A quiz application made with javascript.
