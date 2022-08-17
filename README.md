@@ -2,7 +2,7 @@
 
 # Javascript Quiz
 
-<h2>Description<br><h4>A quiz application made with javascript
+<h2>Description<br><h4>A quiz application made with javascript.
 <h3 align="left">App Deployed Here</h3>
  https://noah0217.github.io/javascript-quiz-4/
   
